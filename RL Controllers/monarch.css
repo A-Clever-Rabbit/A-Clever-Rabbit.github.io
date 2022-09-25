@@ -1,282 +1,138 @@
+/* -- PS5 Skin for GamepadViewer | Created by CrazyGrape --
+HOW TO USE IN OBS:
+1. Go to GamepadViewer.com and generate a URL (make sure to USE THE XBOX SKIN or leave the skin blank)
+2. Generate your URL once the settings are correct and copy it to your clipboard
+3. In OBS, create a new browser source
+4. In the URL Screen, paste the link copied from GamepadViewer.com
+5. Set the width to 807 and the height to 651
+6. Paste the contents of this CSS file into the Custom CSS field
+7. Click Done.
+8. Enjoy the skin! */
+body {
+    background-color: #000000;
+    background-color: RGBA(0, 0, 0, 0);
+    margin: 0 auto;
+    overflow: hidden;
+} .controller.xbox{
+      background: url(https://i.imgur.com/fJIyBwn.png);
+      width: 807px;
+      height: 651px;
+      margin-left: 0;
+      margin-top: 0;
+  } .xbox .sticks {
+        width: 367px;
+        height: 100px;
+        left: 220px;
+        top: 333px;
+    }.xbox .stick {
+         background: url(https://i.imgur.com/nXaGdI2.png);
+         width: 100px;
+         height: 100px;
+     } .xbox .stick.pressed {
+           background-position: -102px 0;
+       } .xbox .stick.right {
+             top: 0;
+             left: 267px;
+         } .xbox .abxy {
+               width: 181px;
+               height: 181px;
+               left: 573px;
+               top: 178px;
+           } .xbox .button {
+                 background: url(https://i.imgur.com/DVqDSsJ.png);
+                 width: 58px;
+                 height: 58px;
+             } .xbox .button.pressed {
+                   background-position-y: -59px;
+                   margin-top: 0;
+               } .xbox .a {
+                     background-position: 0 0;
+                     left: 61px;
+                     top: 123px;
+                 } .xbox .b {
+                       background-position: -59px 0;
+                       left: 123px;
+                       top: 62px;
+                   } .xbox .x {
+                         background-position: -118px 0;
+                         left: 0px;
+                         top: 61px;
+                     } .xbox .y {
+                           background-position: -177px 0;
+                           left: 61px;
+                           top: 0px;
+                       } .xbox .arrows {
+                             left: 195px;
+                             top: 140px;
+                             width: 416px;
+                             height: 57px;
+                         } .xbox .quadrant {
+                               display: none;
+                           } .xbox .back, .xbox .start {
+                                 background: url(https://i.imgur.com/YJRVQxC.png);
+                                 width: 27px;
+                                 height: 57px;
+                                 opacity: 0;
+                             } .xbox .start {
+                                   background-position: 27px 0;
+                                   float: right;
+                               } .xbox .dpad {
+                                     width: 144px;
+                                     height: 144px;
+                                     left: 71px;
+                                     top: 196px;
+                                 } .xbox .face {
+                                       background: url(https://i.imgur.com/hCmzXWK.png);
+                                       position: absolute;
+                                       opacity: 0;
+                                   } .xbox .face.up {
+                                         background-position: 0 -68px;
+                                         width: 52px;
+                                         height: 63px;
+                                         left: 46px;
+                                     } .xbox .face.down {
+                                           background-position: -54px 63px;
+                                           width: 52px;
+                                           height: 63px;
+                                           left: 46px;
+                                           top: 81px;
+                                       } .xbox .face.left {
+                                             background-position: -108px -68px;
+                                             width: 64px;
+                                             height: 52px;
+                                             left: -1px;
+                                             top: 47px;
+                                         } .xbox .face.right {
+                                               background-position: -175px -68px;
+                                               width: 63px;
+                                               height: 52px;
+                                               left: 81px;
+                                               top: 46px;
+                                           } .xbox .bumpers {
+                                                 width: 620px;
+                                                 height: 35px;
+                                                 left: 93px;
+                                                 top: 114px;
+                                             } .xbox .bumper {
+                                                   background: url(https://i.imgur.com/2YssqRT.png);
+                                                   width: 110px;
+                                                   height: 35px;
+                                                   opacity: 0;
+                                               } .xbox .triggers {
+                                                     width: 619px;
+                                                     height: 108px;
+                                                     left: 94px;
+                                                 } .xbox .trigger {
+                                                       background: url(https://i.imgur.com/LsxmGBD.png);
+                                                       width: 111px;
+                                                       height: 108px;
+                                                       opacity: 0;
+                                                   } .xbox .trigger.right {
+                                                         background-position: -113px 0;
+                                                         transform: rotateY(0);
+                                                     }
 /*
--How to use Custom CSS for the Gamepad Viewer-
-http://mrmcpowned.com/gamepad
-
-Enabling a custom CSS is as easy as adding &css=[url to css file]
-to the end of the url like so:
-http://mrmcpowned.com/gamepad?p=1&css=https://gist.github.com/anonymous/526491dc02014099cd14/raw/d7bb0477ba984f794497f3f0f82cb33484dc7889/ps3.css
-
-If you're going to be using custom CSS for the gamepad viewer
-to design your own skin, we're assuming you have some sort of
-basic knowledge on how CSS works. I'd also suggest uploading
-your custom CSS to GitHub's gist as you can easily get the
-direct link for the file by copying the link address on the
-"Raw" button at the top right of the code.
-NOTE: If you're using gist, MAKE SURE TO NAME YOUR CSS FILE!
-It doesn't matter what you call it, so long as it ends in .css
-else the site won't read it and think it's just a plain text.
-
-Each CSS entry must be preceded by '.custom' since that's the
-hardcoded class for a custom style. It doesn't make sense to
-change this as you can only have one custom skin loaded at a time.
-
-If you're using images, they have to be uploaded to an image host of
-your choice. Personally, I'd go with Imgur since it's simple to upload
-and get the direct URL of the image. None of the images in this example
-will load because they're pointing to a location relative of the css
-files, since this is normally in the main CSS file of the site.
-
-The following is a copy of the code used for displaying the PS3 controller
-skin on the Gamepad viewer. You can scroll below and read the comments to
-get an understanding of how the styling works and whatnot. Happy skinning!
-
-P.S. If you use this tool often and would like to 'buy me a coffee' you can
-do so via my Imraising page: https://imraising.tv/u/mrmcpowned
-
+The general design of the DualSense (tm) controller, as well as the PlayStation (tm) logo, are the intellectual property of Sony.
+Vectorized design referenced in the images linked above: copyright (c) CrazyGrape 2021
+This work is licensed under a Creative Commons Attribution 3.0 United States License. The terms of this license are available at https://creativecommons.org/licenses/by/3.0/us/
 */
-
-/*BEGIN PS3 Controller Styling*/
-/*This class defines the base attributes of the skin*/
-.controller.custom{
-    /* The background image is basically the base for the controller's skin. The
-    PS3 controller's skin can be found at http://mrmcpowned.com/gamepad/ps3-assets/base.png
-    and you can observe it as an example. The sticks, buttons, and directional arrows are missing
-    because their appropriate elements will be incorperated when their styling is defined below.
-    The entirity of the skin's visual styling is done via background images and CSS sprites. */
-    background: url(https://i.imgur.com/ygecdI7.png);
-    height: 598px;
-    width: 807px;
-}
-.custom.disconnected { /* This class shows an image when the controller is disconnected */
-    background: url(https://gamepadviewer.com/ps4-assets/disconnected.svgz);
-}
-/* This hides the controller's button when disconnected so only the background image remains */
-.custom.disconnected div {
-    display: none;
-}
-.custom .triggers{ /* The triggers are housed inside a div, so this sizes the div properly and positions it */
-    width: 588px;
-    height: 90px;
-    position: absolute;
-    left: 109px;
-}
-.custom .trigger{/* These are the actual triggers themselves */
-    width: 99px;
-    height: 100%;
-    background: url(https://gamepadviewer.com/ps4-white-assets/triggers.svgz);
-    opacity: 0;
-}
-/* The left and right classes below are used to position the triggers
-within the div they're contained in. Since their positions is realtive
-to the size of the parent element, we simply resize the parent element
-above to achieve the desired position. */
-.custom .trigger.left{
-    float: left;
-}
-.custom .trigger.right{
-    float: right;
-}
-
-/* The bumpers follow the same methodology as the triggers in terms of
-placement */
-.custom .bumper{
-    width: 99px;
-    height: 23px;
-    background: url(https://gamepadviewer.com/ps4-white-assets/bumper.svgz) no-repeat;
-    opacity: 0;
-}
-.custom .bumpers{
-    position: absolute;
-    width: 588px;
-    height: 23px;
-    left: 109px;
-    top: 94px;
-}
-.custom .bumper.pressed{ /* The '.pressed' class is used for most buttons to signify they've been pressed */
-    opacity: 1;
-}
-.custom .bumper.left{
-    /* Call me lazy or smart, but why should I make 2 bumpers when they're symmetrical
-    and I can just rotate them in the browser? Also, note that you most likely won't need
-    to use a browser speficic prefix unless it's something that is indeed browser specific.
-    NOTE: CLR Browser is basically chrome, so you use '-webkit-' as the browser prefix. */
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    float: left;
-}
-.custom .bumper.right{
-    float: right;
-}
-
-.custom .touchpad {
-    width: 262px;
-    height: 151px;
-    position: absolute;
-    left: 272px;
-    top: 122px;
-}
-/* Since the player indicator is just a CSS sprite, we change the
-position of the background to match the player number.
-NOTE: Player orderin starts at 0, so p0 = Player 1 */
-.custom .p0{
-    background-position: 0 -6px;
-}
-.custom .p1{
-    background-position: 0 -28px;
-}
-.custom .p2{
-    background-position: 0 -49px;
-}
-.custom .p3{
-    background-position: 0 -70px;
-}
-
-.custom .meta {
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    left: 382px;
-    bottom: 216px;
-}
-
-.custom .arrows{
-    position: absolute;
-    width: 352px;
-    height: 46px;
-    top: 142px;
-    left: 227px;
-}
-/* Setting the size and CSS sprite for the start adn select buttons */
-.custom .back, .custom .start{
-    background: url(https://gamepadviewer.com/ps4-white-assets/start.svgz);
-    width: 28px;
-    height: 46px;
-    opacity: 0;
-}
-.custom .back.pressed, .custom .start.pressed{
-    background-position-y: -21px;
-    margin-top: 2px;
-}
-.custom .back{
-    float: left;
-    width: 38px;
-}
-.custom .start{
-    float: right;
-    width: 36px;
-    background-position: 37px 0;
-}
-/* Positioning and size of the container for the face buttons */
-.custom .abxy{
-    position: absolute;
-    width: 170px;
-    height: 171px;
-    top: 159px;
-    left: 567px;
-}
-
-/* base class used to simplify the sprite mapping */
-.custom .button{
-    position: absolute;
-    width: 55px;
-    height: 55px;
-    background: url(https://gamepadviewer.com/ps4-white-assets/face.svgz);
-}
-.custom .button.pressed{
-    background-position-y: -64px;
-    margin-top: 5px;
-}
-.custom .a{
-    background-position: 0 0;
-    bottom: 0;
-    left: 58px;
-}
-.custom .b{
-    background-position: -57px 0;
-    top: 58px;
-    right: 0;
-}
-.custom .x{
-    background-position: -113px 0;
-    top: 58px;
-}
-.custom .y{
-    background-position: 55px 0;
-    left: 58px;
-}
-/* Analog sticks follow the same principles as the triggers in terms of positioning
-Note that the rotation of the sticks in hard coded with javascript, so it applies
-the CSS inline. */
-.custom .sticks{
-    position: absolute;
-    width: 361px;
-    height: 105px;
-    top: 308px;
-    left: 228px;
-}
-.custom .stick{
-    position: absolute;
-    background: url(https://gamepadviewer.com/ps4-white-assets/sticks.svgz);
-    height: 94px;
-    width: 94px;
-}
-.custom .stick.pressed.left{
-    background-position-x: -96px;
-}
-.custom .stick.pressed.right{
-    background-position-x: -192px;
-}
-.custom .stick.left{
-    top: 0;
-    left: 0;
-}
-.custom .stick.right{
-    top: calc(100% - 105px);
-    left: calc(100% - 105px);
-}
-
-/* Dpad possitioning and sizing */
-.custom .dpad{
-    position: absolute;
-    width: 125px;
-    height: 126px;
-    top: 181px;
-    left: 92px;
-}
-
-.custom .face{
-    background: url(https://gamepadviewer.com/ps4-white-assets/dpad.svgz);
-    position: absolute;
-}
-.custom .face.up, .custom .face.down{
-    width: 36px;
-    height: 52px;
-}
-.custom .face.left, .custom .face.right{
-    width: 52px;
-    height: 36px;
-}
-.custom .face.up{
-    left: 44px;
-    top: 0;
-    background-position: -37px 0;
-}
-.custom .face.down{
-    left: 44px;
-    bottom: 0;
-    background-position: 0 0;
-}
-.custom .face.left{
-    top: 45px;
-    left: 0;
-    background-position: 104px 0;
-}
-.custom .face.right{
-    top: 45px;
-    right: 0;
-    background-position: 52px 0;
-}
-.custom .face.pressed{
-    margin-top: 5px;
-    background-position-y: 52px;
-}
