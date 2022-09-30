@@ -1,6 +1,6 @@
 /*BEGIN PS4 Controller Styling*/
 .controller.ds4 {
-    background: url(White_SkinNo_Buttons1.png);
+    background: url(White_SkinNo_Buttons3.png);
     height: 700px;
     width: 1200px;
     /*    margin-left: -403px;
@@ -87,16 +87,16 @@
 }
 
 .ds4 .p0{
-background-position: 0 -6px;
+    background-position: 0 -6px;
 }
 .ds4 .p1{
-background-position: 0 -28px;
+    background-position: 0 -28px;
 }
 .ds4 .p2{
-background-position: 0 -49px;
+    background-position: 0 -49px;
 }
 .ds4 .p3{
-background-position: 0 -70px;
+    background-position: 0 -70px;
 }*/
 .ds4 .arrows {
     position: absolute;
