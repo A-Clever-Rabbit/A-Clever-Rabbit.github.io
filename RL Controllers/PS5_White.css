@@ -71,7 +71,7 @@
     position: absolute;
     left: 422px;
     top: 74px;
-    background: url(Touchpad_1.gif) no-repeat center;
+    background: url(new_touchpad.gif) no-repeat center !important;
 }
 
 .ds4 .meta {
