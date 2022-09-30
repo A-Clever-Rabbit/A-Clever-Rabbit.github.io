@@ -107,7 +107,7 @@
 }
 
 .ds4 .back, .ds4 .start {
-    background: url(Select.png);
+    background: url(Select1.png);
     width: 26px;
     height: 43px;
     opacity: 0;
@@ -276,7 +276,7 @@
 /*END PS4 Controller Styling*/
 
 .ds4.white .back, .ds4 .start {
-    background-image: url(Start.png);
+    background-image: url(Start1.png);
     width: 26px;
     height: 43px;
 }
